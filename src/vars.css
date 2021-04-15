@@ -1,0 +1,44 @@
+:root {
+  /* border-radius */
+  --br: 3px;
+  /* box-shadow */
+  --bs: 0 1px 8px -2px rgba(0, 0, 0, 0.7);
+
+  /* 
+    =============================================
+    transition 
+    =============================================
+  */
+  --transition-dur-quick: 0.175s;
+  --transition-dur: 0.75s;
+  --transition-dur-slow: 1.5s;
+  --transition-timing-func: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  --transition: all var(--transition-dur) var(--transition-timing-func);
+  /* 
+    MUST INCLUDE ABOVE "TRANSITION" AND BELOW "TRANSITION-PROP" WHEN USING
+    ex:
+      transition: var(--transition);
+      transition-property: var(--transition-property); 
+  */
+  --transition-prop: background, background-color, color, box-shadow, border-color, opacity;
+
+  /* 
+    =============================================
+    palette
+    =============================================
+  */
+  --black: #171211;
+  --dark-grey: #2a2b27;
+  --light-grey: #808377;
+  --white: #f7faef;
+  --green: #114c2aff;
+  --red: #8b0000ff;
+  --purple: #7600a8ff;
+  --blue: #1f3a93ff;
+
+  /* dark theme */
+  --light-green: #48d583;
+  --light-red: #ffa8a8;
+  --light-purple: #e5a8ff;
+  --light-blue: #aabaee;
+}

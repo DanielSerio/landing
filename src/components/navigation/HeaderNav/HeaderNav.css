@@ -1,0 +1,66 @@
+.header-nav {
+  position: relative;
+}
+.header-nav > nav.open {
+  height: auto;
+  width: auto;
+  background: #030303;
+  color: var(--white);
+  border-radius: var(--br);
+  opacity: 1;
+  box-shadow: var(--bs);
+}
+
+
+.header-nav > .icon,
+.header-nav > nav.open > header {
+  text-align: right;
+  font-size: 1.5rem;
+  padding: 0.5ch;
+  line-height: 1rem;
+  opacity: 1;
+}
+
+.app .header-nav a,
+.app.dark .header-nav a { 
+  color: var(--white); 
+  text-decoration: underline;
+  display: block;
+
+}
+
+.header-nav > nav li {
+  list-style: none;
+  padding: 0.5ch 2ch;
+  display: flex;
+  align-items: center;
+}
+
+.header-nav > nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-nav > nav {
+  position: fixed;
+  transition: var(--transition);
+  transition-duration: var(--transition-dur-quick);
+  transition-property: var(--transition-prop);
+  overflow: hidden;
+  top: 2ch;
+  right: 2ch;
+  z-index: 990;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.header-nav > nav > header { opacity: 0; }
+
+.header-nav > nav  button {
+  width: 100%;
+  background-color: transparent;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(100, 100, 100, 0.5)
+}

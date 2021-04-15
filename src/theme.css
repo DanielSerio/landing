@@ -1,0 +1,24 @@
+.app {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.btn {
+  cursor: pointer;
+  color: inherit;
+  transition: var(--transition);
+  transition-duration: var(--transition-dur-quick);
+  transition-property: var(--transition-prop);
+}
+
+.app a { color: var(--blue); }
+.app a:visited { color: var(--purple); }
+
+
+.app.dark {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.app.dark a { color: var(--light-blue); }
+.app.dark a:visited { color: var(--light-purple); }
