@@ -1,0 +1,12 @@
+.content .container,
+.content p {  margin: 0 auto; }
+
+.content .container {
+  width: 95%;
+  max-width: 100ch;
+}
+
+.content p,
+.content h1 {  max-width: 60ch; }
+
+.content h1 { text-align: center; }

@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext } from 'react'
+import React, { ReactElement, useContext, useRef } from 'react'
 import HeaderNavProps from './HeaderNavProps';
 import { ImMenu } from 'react-icons/im';
 import { VscColorMode } from 'react-icons/vsc';
@@ -6,9 +6,23 @@ import { IoMdClose } from 'react-icons/io';
 import './HeaderNav.css';
 import Button from '../../controls/Button/Button';
 import ThemeContext from '../../../state/ThemeContext';
+import useClickOutside from '../../../hooks/useClickOutside';
 
 export default function HeaderNav({ isOpen, open, close }: HeaderNavProps) {
   const [theme, toggleTheme] = useContext(ThemeContext);
+  const ref = useRef(null);
+
+  useClickOutside(ref, close);
+
+  const handleThemeClick = () => {
+    close();
+    toggleTheme();
+  };
+
+  const handleThemeTouch = () => {
+    close();
+    toggleTheme();
+  };
 
   const Ul = (): ReactElement => {
     const urls: {[key: string]: string} = {
@@ -30,23 +44,18 @@ export default function HeaderNav({ isOpen, open, close }: HeaderNavProps) {
     );
   }
 
-  const handeThemeClick = () => {
-    close();
-    toggleTheme();
-  };
-
   return (
     <div className="header-nav">
       <div className="icon">
-        <ImMenu onClick={open}/>
+        <ImMenu onClick={open} onTouchEnd={open}/>
       </div>
-      <nav className={isOpen ? 'open' : undefined}>
+      <nav className={isOpen ? 'open' : undefined} ref={ref}>
         <header>
-          <IoMdClose onClick={close}/> 
+          <IoMdClose onClick={close} onTouchEnd={close}/> 
         </header>
         <Ul />
         <footer>
-          <Button leftIcon={<VscColorMode />} onClick={handeThemeClick}>Theme</Button>
+          <Button leftIcon={<VscColorMode />} onTouchEnd={handleThemeTouch} onClick={handleThemeClick}>Theme</Button>
         </footer>
       </nav>
     </div>

@@ -42,6 +42,8 @@
   margin: 0;
 }
 
+.header-nav svg { cursor: pointer; }
+
 .header-nav > nav {
   position: fixed;
   transition: var(--transition);
@@ -62,5 +64,5 @@
   width: 100%;
   background-color: transparent;
   margin-top: 1rem;
-  border-top: 1px solid rgba(100, 100, 100, 0.5)
+  border-top: 1px solid rgba(100, 100, 100, 0.5);
 }
