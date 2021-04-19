@@ -14,7 +14,12 @@ export default function Main() {
         <Section className="about" id="about">
           <article>
             <h1>About</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum nemo voluptatum suscipit, aspernatur commodi necessitatibus architecto rem, id eum quisquam ab eligendi libero aperiam ad quidem voluptate. Temporibus, hic!</p>
+            <p>
+              My name is Dan Serio. 
+              I have loved web development since I first discovered it at the <a href="https://www.aaart.edu/">American Academy of Art</a> Thirteen years ago.
+              I'm very interested in frontend development and I have a particular interest in Typescript and React. I also enjoy working on backend/fullstack projects as well as experimenting with other languages and libraries.
+              I like discovering and using the right tools for the job, and I take pleasure in seeking out the simplest solutions possible.
+            </p>
           </article>
         </Section>
         <Section className="showcase" id="showcase">
