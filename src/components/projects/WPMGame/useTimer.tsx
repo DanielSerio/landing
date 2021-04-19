@@ -10,10 +10,11 @@ export default function useTimer() {
 
   const resume = () => setIsRunning(true);
 
-  const start = () => {
+  const start = (cb?: () => void) => {
     resume();
     setTimeStart(Date.now());
     setTimer(Date.now());
+    if (cb) cb();
   };
 
   const clear = () => {

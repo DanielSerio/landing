@@ -29,3 +29,9 @@ textarea {
   background: transparent;
   padding: 0 1ch;
 }
+
+textarea {
+  resize: vertical;
+  width: 100%;
+  min-height: 6rem;
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './ProjectNav.css'
+import './ProjectNav.dark.css'
 
 export default function ProjectNav() {
   return (

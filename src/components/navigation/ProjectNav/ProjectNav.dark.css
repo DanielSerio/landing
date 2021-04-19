@@ -1,0 +1,23 @@
+.app.dark .project-nav a:visited:hover {
+  color: var(--light-purple);
+  border-color: var(--light-purple); 
+}
+
+.app.dark .project-nav a:not(.active):hover { 
+  color: var(--light-blue);
+  border-color: var(--light-blue); 
+}
+
+.app.dark .project-nav a:visited:hover,
+.app.dark .project-nav a:not(.active):hover { background: transparent; }
+
+.app.dark .project-nav a:not(.active) {
+  color: var(--white);
+}
+
+.app.dark .project-nav a.active,
+.app.dark .project-nav a.active:hover {
+  border-color: var(--light-green);
+  color: var(--light-green);
+  background: transparent;
+}

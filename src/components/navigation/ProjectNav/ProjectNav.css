@@ -1,8 +1,13 @@
+
+
 .project-nav {
   max-width: 60ch;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
+
 }
+
 
 .app .project-nav a {
   display: block;
@@ -12,6 +17,7 @@
   padding: 0 2ch;
   border-radius: var(--br);
   color: inherit;
+  margin: 0.25rem 0;
 }
 
 .app .project-nav a:visited:hover {
@@ -33,22 +39,22 @@
 
 .app .project-nav a.active:hover { background: white; }
 
-
-.app.dark .project-nav a:visited:hover {
-  color: var(--light-purple);
-  border-color: var(--light-purple); 
-}
-
-.app.dark .project-nav a:not(.active):hover { 
-  color: var(--light-blue);
-  border-color: var(--light-blue); 
-}
-
-.app.dark .project-nav a.active,
-.app.dark .project-nav a.active:hover {
-  border-color: var(--light-green);
-  color: var(--light-green);
-  background: transparent;
-}
-
 .app .project-nav a.active:hover { background: transparent; }
+
+
+@media (min-width: 515px) {
+  .project-nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .project-nav a { 
+    flex: 1; 
+    text-align: center;
+    font-size: calc(2vmin + 6px);
+    white-space: nowrap;
+  }
+
+  .project-nav a:not(:last-child) { margin-right: 1ch; }
+}
