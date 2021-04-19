@@ -22,3 +22,13 @@
 
 .app.dark a { color: var(--light-blue); }
 .app.dark a:visited { color: var(--light-purple); }
+
+.app ::selection {
+  background: var(--green);
+  color: var(--white);
+}
+
+.app.dark ::selection {
+  background: var(--light-green);
+  color: var(--black);
+}

@@ -1,0 +1,6 @@
+.todo-form {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.todo-form > .input { flex: 1; } 

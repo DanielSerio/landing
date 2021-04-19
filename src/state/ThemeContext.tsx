@@ -9,7 +9,9 @@ declare type ThemeContextType = [ITheme, () => void];
 declare type IThemeContext = Context<ThemeContextType>;
 
 const getPrefersDark = (): boolean => {
-  const prefersDark: string = localStorage.getItem('prefers-dark') || 'false';
+  let prefersDark: string|null = localStorage.getItem('prefers-dark');
+  if (prefersDark === null) prefersDark = 'false';
+  localStorage.setItem('prefers-dark', prefersDark);
   return JSON.parse(prefersDark);
 }
 
@@ -23,8 +25,8 @@ export const ThemeProvider = ({ children }: ComponentProps<'div'>) => {
   const value = useMemo<ThemeContextType>(() => [state, toggleTheme], [state, toggleTheme]);
 
   useEffect(() => {
-    if (state.prefersDark || getPrefersDark() === false) localStorage.setItem('prefers-dark', 'true'); 
-    if (!state.prefersDark || getPrefersDark() === true) localStorage.setItem('prefers-dark', 'false'); 
+    if (state.prefersDark) localStorage.setItem('prefers-dark', 'true'); 
+    if (!state.prefersDark) localStorage.setItem('prefers-dark', 'false'); 
   }, [state, toggleTheme]);
 
   return (

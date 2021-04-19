@@ -1,0 +1,17 @@
+.btn-group {
+  display: flex;
+  border-radius: var(--br);
+  transition: var(--transition);
+  transition-property: var(--transition-prop);
+}
+
+.btn-group:hover {
+  background: rgba(160,160,160, 0.1);
+  box-shadow: 0 0 2px -1px black;
+}
+
+.btn-group > .btn:first-child { border-radius: var(--br) 0 0 var(--br);}
+
+.btn-group > .btn:last-child { border-radius: 0 var(--br) var(--br) 0; }
+
+.btn-group > .btn { box-shadow: none; }

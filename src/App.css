@@ -3,4 +3,6 @@
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  transition: var(--transition);
+  transition-property: var(--transition-prop);
 }

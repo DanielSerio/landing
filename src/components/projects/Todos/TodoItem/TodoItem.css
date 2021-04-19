@@ -1,0 +1,16 @@
+.todo-item td > .cell { 
+  display: flex; 
+  color: #121517bf;
+}
+
+.todo-item td:first-child > .cell { align-items: flex-end; }
+
+.todo-item td:nth-child(2) > .cell { 
+  align-items: flex-start; 
+}
+
+.todo-item td:nth-child(2) > .cell:hover { color: black; }
+
+.app.dark .todo-item td:nth-child(2) > .cell { color: rgba(250,250,250, 0.5); }
+
+.app.dark .todo-item td:nth-child(2) > .cell:hover { color: white; }

@@ -12,7 +12,9 @@ export default function Header() {
 
   return (
     <header className="header">
-      <h1 className="logo">Dan Serio</h1>
+      <div className="logo-area">
+        <h1 className="logo">Dan Serio</h1><small>dserio.d@gmail.com</small>
+      </div>
       <HeaderNav isOpen={isOpen} open={openMenu} close={closeMenu}/>
     </header>
   )

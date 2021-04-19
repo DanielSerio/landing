@@ -1,0 +1,106 @@
+.btn,
+.btn.outline,
+.btn.subtle { background: transparent; }
+
+.btn:disabled {
+  background: var(--light-grey);
+  color: var(--dark-grey);
+  opacity: 0.75;
+  cursor: not-allowed;
+} 
+
+.subtle.btn:disabled {
+  color: rgba(100,100,100, 0.75);
+  background: transparent;
+  opacity: 0.75;
+} 
+
+.btn {
+  cursor: pointer;
+  color: inherit;
+  transition: var(--transition);
+  transition-duration: var(--transition-dur-quick);
+  transition-property: var(--transition-prop);
+  display: flex;
+  align-items: center;
+}
+
+.app .btn > span { padding: 0 1ch; }
+
+.btn.outline { 
+  border: 1px solid; 
+  font-weight: bold;
+}
+
+.btn.subtle { font-weight: bold; }
+
+.btn.subtle:not(:disabled):hover {
+  background: rgba(0,0,0,0.15);
+}
+
+.app .btn.subtle.primary:not(:disabled) {
+  color: var(--green);
+  background: transparent;
+}
+
+.app.dark .btn.subtle.primary:not(:disabled) {
+  color: var(--light-green);
+  background: transparent;
+}
+
+.app .btn.subtle.primary:not(:disabled):hover {
+  background: var(--green);
+  color: white;
+}
+
+.app.dark .btn.subtle.primary:not(:disabled):hover {
+  background: var(--light-green);
+  color: black;
+}
+
+
+.app.dark .btn.subtle.error:not(:disabled) {
+  color: var(--light-red);
+  background: transparent;
+}
+
+.app .btn.subtle.error:not(:disabled):hover {
+  background: var(--red);
+  color: white;
+}
+
+.app.dark .btn.subtle.error:not(:disabled):hover {
+  background: var(--light-red);
+  color: black;
+}
+
+
+.btn.subtle.error:not(:disabled) {
+  color: var(--red);
+  background: transparent;
+}
+
+.btn.subtle.error:not(:disabled):hover {
+  background: var(--red);
+  color: white;
+}
+
+.app .btn:not(:disabled).primary {
+  background: var(--green);
+  color: white;
+}
+
+.app .btn:not(:disabled).error {
+  background: var(--red);
+  color: white;
+}
+
+.app.dark .btn:not(:disabled).primary {
+  background: var(--light-green);
+  color: black;
+}
+
+.app .btn:not(:disabled).error {
+  background: var(--light-red);
+  color: black;
+}

@@ -17,6 +17,15 @@ select,
 textarea {
   appearance: none;
   outline: none;
+  border-radius: var(--br);
 }
 
 button { border: none; }
+
+input,
+select,
+textarea {
+  border: 1px solid;
+  background: transparent;
+  padding: 0 1ch;
+}

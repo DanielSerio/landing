@@ -1,0 +1,54 @@
+.project-nav {
+  max-width: 60ch;
+  margin: 0 auto;
+  display: flex;
+}
+
+.app .project-nav a {
+  display: block;
+  border: 1px solid;
+  border-color: rgba(150,150,150,0.58);
+  line-height: 2;
+  padding: 0 2ch;
+  border-radius: var(--br);
+  color: inherit;
+}
+
+.app .project-nav a:visited:hover {
+  color: var(--purple);
+  border-color: var(--purple); 
+}
+
+.app .project-nav a:not(.active):hover { 
+  color: var(--blue);
+  border-color: var(--blue); 
+  background: white;
+}
+
+.app .project-nav a.active,
+.app .project-nav a.active:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.app .project-nav a.active:hover { background: white; }
+
+
+.app.dark .project-nav a:visited:hover {
+  color: var(--light-purple);
+  border-color: var(--light-purple); 
+}
+
+.app.dark .project-nav a:not(.active):hover { 
+  color: var(--light-blue);
+  border-color: var(--light-blue); 
+}
+
+.app.dark .project-nav a.active,
+.app.dark .project-nav a.active:hover {
+  border-color: var(--light-green);
+  color: var(--light-green);
+  background: transparent;
+}
+
+.app .project-nav a.active:hover { background: transparent; }

@@ -55,7 +55,7 @@ export default function HeaderNav({ isOpen, open, close }: HeaderNavProps) {
         </header>
         <Ul />
         <footer>
-          <Button leftIcon={<VscColorMode />} onTouchEnd={handleThemeTouch} onClick={handleThemeClick}>Theme</Button>
+          <Button className="subtle menu-btn" leftIcon={<VscColorMode />} onTouchEnd={handleThemeTouch} onClick={handleThemeClick}>Theme</Button>
         </footer>
       </nav>
     </div>

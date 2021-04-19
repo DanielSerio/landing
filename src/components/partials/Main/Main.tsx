@@ -1,6 +1,10 @@
 import React from 'react'
-import { Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Section from '../../containers/Section/Section'
+import ProjectNav from '../../navigation/ProjectNav/ProjectNav'
+import GameOfLife from '../../projects/GameOfLife/GameOfLife'
+import Todos from '../../projects/Todos/Todos'
+import WPMGame from '../../projects/WPMGame/WPMGame'
 import './Main.css'
 
 export default function Main() {
@@ -15,8 +19,11 @@ export default function Main() {
         </Section>
         <Section className="showcase" id="showcase">
           <h1>Showcase</h1>
+          <ProjectNav />
           <Switch>
-
+            <Route path="/todos" component={Todos}/>
+            <Route path="/game-of-life" component={GameOfLife}/>
+            <Route path="/words-per-minute" component={WPMGame}/>
           </Switch>
         </Section>
       </div>

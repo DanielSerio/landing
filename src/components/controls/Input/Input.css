@@ -1,0 +1,51 @@
+.app input.input:disabled {}
+
+.app input,
+.app select,
+.app textarea { 
+  border-color: rgba(0, 0, 0, 0.3); 
+  color: rgba(0, 0, 0, 0.6); 
+  transition: var(--transition);
+  transition-property: var(--transition-prop);
+}
+
+.app .input:hover,
+.app .select:hover,
+.app .textarea:hover { 
+  border-color: rgba(0,0,0, 0.67); 
+  color: rgba(0,0,0, 0.9); 
+}
+
+.app .input.primary:active,
+.app .select.primary:active,
+.app .textarea.primary:active,
+.app .input.primary:focus,
+.app .select.primary:focus,
+.app .textarea.primary:focus { 
+  border-color: var(--green); 
+  background: white;
+  color: var(--black);
+}
+
+
+.app.dark input,
+.app.dark select,
+.app.dark textarea { 
+  border-color: rgba(255,255,255, 0.3); 
+  color: rgba(255,255,255, 0.5);
+}
+
+.app.dark input:hover,
+.app.dark select:hover,
+.app.dark textarea:hover { border-color: rgba(255,255,255, 0.67); }
+
+.app.dark input.input.primary:active,
+.app.dark select.primary:active,
+.app.dark textarea.primary:active,
+.app.dark input.input.primary:focus,
+.app.dark select.primary:focus,
+.app.dark textarea.primary:focus { 
+  border-color: var(--light-green); 
+  background: rgba(255,255,255, 0.75);
+  color: var(--black);
+}
